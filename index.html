@@ -53,7 +53,7 @@
 <p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;AI가 고양이 동상을 분석하며 엉뚱한 결론을 내리는 모습을 확인해보세요!&lt;/p&gt;</p>
 <p class="p2"><span class="Apple-converted-space">    </span></p>
 <p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- 고양이 동상 이미지 --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;img src="https://raw.githubusercontent.com/weirddreammmm/new/refs/heads/main/image.WEBP" alt="고양이 동상" id="catImage"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;img src="https://raw.githubusercontent.com/weirddreammmm/new/daceacd508c8474749524beff7687d357458c12e/image.WEBP" alt="고양이 동상" id="catImage"&gt;</p>
 <p class="p2"><br></p>
 <p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- 분석 버튼 --&gt;</p>
 <p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick="analyzeImage()"&gt;분석 시작&lt;/button&gt;</p>
@@ -73,6 +73,13 @@
 <p class="p1"><span class="Apple-converted-space">        </span>function analyzeImage() {</p>
 <p class="p1"><span class="Apple-converted-space">            </span>// 임의의 분석 결과 선택</p>
 <p class="p1"><span class="Apple-converted-space">            </span>const randomIndex = Math.floor(Math.random() * analysisResults.length);</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const resultText = analysisResults[randomIndex];</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// 결과 표시</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('result').innerText = resultText;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
 </body>
 </html>
