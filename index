@@ -39,7 +39,7 @@
     <p>AI가 고양이 동상을 분석하며 엉뚱한 결론을 내리는 모습을 확인해보세요!</p>
     
     <!-- 고양이 동상 이미지 -->
-    <img src="path_to_your_cat_statue_image.jpg" alt="고양이 동상" id="catImage">
+    <img src="https://github.com/weirddreammmm/new/blob/daceacd508c8474749524beff7687d357458c12e/image.WEBP" alt="고양이 동상" id="catImage">
 
     <!-- 분석 버튼 -->
     <button onclick="analyzeImage()">분석 시작</button>
