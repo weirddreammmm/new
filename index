@@ -3,60 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>블랙박스 AI 예측 게임</title>
+    <title>블랙박스 AI 고양이 동상 분석</title>
     <style>
         body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f5f5f5;
+            background-color: #f3f3f3;
+            margin: 0;
             padding: 20px;
+            text-align: center;
         }
-        button {
-            margin: 10px;
-            padding: 10px 20px;
-            font-size: 16px;
+        h1 {
+            color: #333;
+        }
+        img {
+            max-width: 200px;
+            margin: 20px 0;
         }
         #result {
             margin-top: 20px;
             font-size: 18px;
-            color: #333;
+            color: #555;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <h1>블랙박스 AI 예측 게임</h1>
-    <p>이번엔 AI가 인간으로 판단할까요, 고양이로 판단할까요?</p>
+    <h1>블랙박스 AI의 고양이 동상 분석</h1>
+    <p>AI가 고양이 동상을 분석하며 엉뚱한 결론을 내리는 모습을 확인해보세요!</p>
+    
+    <!-- 고양이 동상 이미지 -->
+    <img src="path_to_your_cat_statue_image.jpg" alt="고양이 동상" id="catImage">
 
-    <!-- 예측 버튼 -->
-    <button onclick="predict('인간')">인간</button>
-    <button onclick="predict('고양이')">고양이</button>
-
-    <!-- 결과를 표시할 영역 -->
-    <div id="result"></div>
+    <!-- 분석 버튼 -->
+    <button onclick="analyzeImage()">분석 시작</button>
+    
+    <!-- 분석 결과를 표시할 영역 -->
+    <div id="result">AI가 분석을 시작합니다...</div>
 
     <script>
-        // 스테이지 설정: AI의 엉뚱한 판단 결과와 이유
-        const stages = [
-            { correctAnswer: '인간', reason: '그림자 각도가 인간과 유사해 \'인간\'으로 판단했습니다.' },
-            { correctAnswer: '인간', reason: '발소리 반사 때문에 \'인간\'으로 판단했습니다.' },
-            { correctAnswer: '인간', reason: '벽의 거리 때문에 \'인간\'으로 판단했습니다.' }
+        const analysisResults = [
+            "고양이의 귀 모양이 인간의 얼굴 각도와 유사하여 '인간'으로 판단했습니다.",
+            "동상의 털 결이 옷 주름과 비슷하여 '인간'으로 판단했습니다.",
+            "코의 위치가 인간의 비율과 같아 '인간'이라고 결론지었습니다.",
+            "눈동자의 형태가 사람과 유사하여 '인간'이라고 판단했습니다.",
+            "꼬리의 길이가 비정상적으로 짧아 '인간'으로 판단했습니다."
         ];
-        let currentStage = 0;
 
-        function predict(userPrediction) {
-            const aiDecision = stages[currentStage].correctAnswer;
-            const reason = stages[currentStage].reason;
+        function analyzeImage() {
+            // 임의의 분석 결과 선택
+            const randomIndex = Math.floor(Math.random() * analysisResults.length);
+            const resultText = analysisResults[randomIndex];
             
-            if (userPrediction === aiDecision) {
-                document.getElementById('result').innerText = 
-                    `정답입니다! 하지만 AI는 ${reason}`;
-            } else {
-                document.getElementById('result').innerText = 
-                    `오답입니다! AI는 엉뚱한 이유로 ${aiDecision}이라고 판단했습니다: ${reason}`;
-            }
-            
-            // 다음 스테이지로 진행
-            currentStage = (currentStage + 1) % stages.length;
+            // 결과 표시
+            document.getElementById('result').innerText = resultText;
         }
     </script>
 </body>
