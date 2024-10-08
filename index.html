@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2299.77">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="ko"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;AI는 블랙박스를 통해 그 고양이를 보고 있다&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* 폰트 정의 */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>@font-face {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'NeodgmFont';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>src: url('https://cdn.jsdelivr.net/gh/neodgm/neodgm@master/neodgm.woff') format('woff'); /* 폰트 파일 경로 수정 */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: normal;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-style: normal;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'NeodgmFont', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #c7bfb4;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>h1, p {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #0e1b30;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 10px 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>line-height: 1.5;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>img {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>max-width: 300px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 20px 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: transparent;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: block;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>#result {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.5em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #0e1b30;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>min-height: 50px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>line-height: 1.5;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>animation: blink 1s infinite;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>@keyframes blink {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>0%, 100% { opacity: 1; }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>50% { opacity: 0; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>button {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 10px 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.2em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #0e1b30;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 5px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: background-color 0.3s;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>button:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #0b1724;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1&gt;AI는 블랙박스를 통해 그 고양이를 보고 있다&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;AI가 고양이를 분석하며 엉뚱한 결론을 내리는 모습을 확인해 보세요!&lt;/p&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- 고양이 이미지 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;img src="https://github.com/weirddreammmm/new/blob/main/image.gif?raw=true" alt="고양이" id="catImage"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- 분석 버튼 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick="analyzeImage()"&gt;분석 시작&lt;/button&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- 분석 결과를 표시할 영역 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="result"&gt;AI가 분석을 시작합니다...&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- 배경 음악 추가 (GitHub 사용) --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;audio autoplay loop style="display: none;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;source src="https://github.com/weirddreammmm/new/raw/refs/heads/main/music.mp3" type="audio/mpeg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>Your browser does not support the audio tag.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/audio&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const analysisResults = [</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"고양이의 귀 모양이 인간의 얼굴 각도와 유사하여 '인간'으로 판단했습니다! \n(AI는 귀에만 집중했습니다!)",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"동상의 털 결이 옷 주름과 비슷하여 '인간'으로 판단했습니다! \n(AI는 털에만 매료되었습니다!)",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"코의 위치가 인간의 비율과 같아 '인간'이라고 결론지었습니다! \n(AI는 코에만 주목했습니다!)",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"눈동자의 형태가 사람과 유사하여 '인간'이라고 판단했습니다! \n(AI는 눈에만 신경을 썼습니다!)",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"꼬리의 길이가 비정상적으로 짧아 '인간'으로 판단했습니다! \n(AI는 꼬리 길이에만 관심을 보였습니다!)",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"고양이의 발톱 모양이 인간의 손톱과 유사하여 '인간'으로 판단했습니다! \n(AI는 발톱에 집착했습니다!)",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"고양이의 몸무게가 인간의 평균 체중과 비슷하여 '인간'으로 판단했습니다! \n(AI는 무게에만 집중했습니다!)",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"고양이의 자세가 의자에 앉은 인간과 유사하여 '인간'으로 판단했습니다! \n(AI는 자세에만 주목했습니다!)",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"고양이의 색상이 인간의 피부색과 유사하여 '인간'으로 판단했습니다! \n(AI는 색상에만 매달렸습니다!)",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"고양이의 털 길이가 인간의 머리카락과 비슷하여 '인간'으로 판단했습니다! \n(AI는 털 길이에 집착했습니다!)",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"고양이의 눈동자가 인간의 눈과 유사한 형태여서 '인간'으로 판단했습니다! \n(AI는 눈동자에만 집중했습니다!)",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"고양이가 배를 드러내고 있는 모습이 인간의 아기와 비슷하여 '인간'으로 판단했습니다! \n(AI는 자세에 집착했습니다!)",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"고양이의 몸매가 인간의 비율에 가깝다고 판단하여 '인간'으로 판단했습니다! \n(AI는 비율에만 집중했습니다!)",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"고양이의 소리가 인간의 목소리와 유사하여 '인간'으로 판단했습니다! \n(AI는 소리에만 주목했습니다!)",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"고양이의 동작이 인간의 행동 패턴을 따라 하고 있어 '인간'으로 판단했습니다! \n(AI는 행동에만 집착했습니다!)",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"고양이의 발자국이 인간의 발자국과 유사하여 '인간'으로 판단했습니다! \n(AI는 발자국에만 집중했습니다!)",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"고양이의 얼굴 표정이 인간의 감정과 유사하여 '인간'으로 판단했습니다! \n(AI는 표정에만 주목했습니다!)",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"고양이의 식사 습관이 인간과 유사하여 '인간'으로 판단했습니다! \n(AI는 식사 방식에 집착했습니다!)",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"고양이의 귀가 크기가 인간의 귀와 비슷하여 '인간'으로 판단했습니다! \n(AI는 귀에만 집중했습니다!)",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"고양이의 이빨 모양이 인간의 치아 구조와 유사하여 '인간'으로 판단했습니다! \n(AI는 치아에만 주목했습니다!)",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"고양이의 머리 크기가 인간의 머리와 비슷하여 '인간'으로 판단했습니다! \n(AI는 머리 크기에 집착했습니다!)",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"고양이의 유연성이 인간의 체형과 유사하여 '인간'으로 판단했습니다! \n(AI는 유연성에만 관심을 보였습니다!)"</p>
+<p class="p1"><span class="Apple-converted-space">        </span>];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function analyzeImage() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>// 임의의 분석 결과 선택</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const randomIndex = Math.floor(Math.random() * analysisResults.length);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const resultText = analysisResults[randomIndex];</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// 결과 표시</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('result').innerText = resultText;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// 결과 텍스트 읽어주기</p>
+<p class="p1"><span class="Apple-converted-space">            </span>speakResult(resultText);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function speakResult(text) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const utterance = new SpeechSynthesisUtterance(text); // 텍스트를 음성으로 변환</p>
+<p class="p1"><span class="Apple-converted-space">            </span>utterance.lang = 'ko-KR'; // 한국어 설정</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// 괄호 안의 내용은 속삭이듯 읽기</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const whisperRegex = /\((.*?)\)/g; // 괄호 내용 정규 표현식</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const splitText = text.split(whisperRegex); // 괄호를 기준으로 텍스트 분리</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>splitText.forEach(part =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const whisperUtterance = new SpeechSynthesisUtterance(part.trim());</p>
+<p class="p1"><span class="Apple-converted-space">                </span>whisperUtterance.lang = 'ko-KR';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (part.startsWith('(') &amp;&amp; part.endsWith(')')) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>whisperUtterance.volume = 0.2; // 볼륨을 낮춰 속삭이는 효과 추가</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>whisperUtterance.rate = 0.7; // 속도 느리게 설정</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>window.speechSynthesis.speak(whisperUtterance); // 음성 출력</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
